@@ -1,0 +1,20 @@
+[
+    {
+      "roll_no": 1,
+      "Animal_name": "Suriya",
+      "age": 5,
+      "gender": "Male"
+    },
+    {
+      "roll_no": 2,
+      "Animal_name": "Selva",
+      "age": 3,
+      "gender": "Male"
+    },
+    {
+      "roll_no": 3,
+      "Animal_name": "crocodile",
+      "age": 2,
+      "gender": "Male"
+    }
+]
