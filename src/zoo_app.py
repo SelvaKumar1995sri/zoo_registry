@@ -59,7 +59,8 @@ def add_det(animal : Animals):
 @app.delete('/api/deleteanimal/{roll_no}',tags=['Animals'])
 def delete(roll_no):
     try:
-        mycollection.delete_many({"roll_no":int(roll_no)})
+        col = get_collection()
+        col.delete_many({"roll_no":int(roll_no)})
         return {"data":"Successfully deleted"}
     except Exception as e:
         print("error on viewing data " +str(e))
@@ -68,12 +69,11 @@ def delete(roll_no):
 @app.put('/api/update/{roll_no}',tags=["Animals"])
 def update(roll_no,student:Animals):
     try:
-        
+        col = get_collection()
         userip=dict(student)
-        
-        mycollection.update_many({"roll_no":int(roll_no)},{"$set":userip})
+        col.update_many({"roll_no":int(roll_no)},{"$set":userip})
 
-        return animal_serial(mycollection.find({"roll_no":roll_no}))
+        return animal_serial(col.find({"roll_no":roll_no}))
 
     except Exception as e:
         print("error on viewing data " +str(e))

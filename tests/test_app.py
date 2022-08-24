@@ -23,7 +23,7 @@ def test_add():
     data = get_test_profile()
     response = client.post("/api/addanimal/",json= data)
     assert response.status_code == 200
-    assert response.json() == {"data":"Successfully added"}
+    
 
 def test_delete():
     response = client.delete("/api/deleteanimal/3")
