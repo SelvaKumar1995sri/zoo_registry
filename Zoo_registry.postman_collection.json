@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "60c05c42-3807-49dc-8315-c00a586ca433",
+		"name": "Zoo_registry",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/zoo_view_all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "x-api-key",
+						"value": "selva",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://127.0.0.1:8000/api/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/zoo_view",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "x-api-key",
+						"value": "selva",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "http://127.0.0.1:8000/api/viewanimal/1"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/add animal",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "x-api-key",
+						"value": "selva",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roll_no\": 11,\r\n    \"Animal_name\": \"godzila\",\r\n    \"age\": 2,\r\n    \"gender\": \"Male\"\r\n}"
+				},
+				"url": "http://127.0.0.1:8000/api/addanimal"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/ add list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "x-api-key",
+						"value": "selva",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"62b470a7ce8d8697632f93ew\",\r\n    \"data\": {\r\n        \"profile_info\": {\r\n            \"profile_Master\": {\r\n                \"primary_key\": {\r\n                    \"user\": \"edwin\",\r\n                    \" password\": \"Edwin@123\"\r\n                }\r\n            }\r\n        },\r\n        \"coverage\": [\r\n            {\r\n                \"no\": 1,\r\n                \"start_date\": \"09-09-2021\",\r\n                \"end_date\": \"10-10-2022\"\r\n            },\r\n            {\r\n                \"no\": 2,\r\n                \"start_date\": \"09-09-2022\",\r\n                \"end_date\": \"10-10-2023\"\r\n            },\r\n            {\r\n                \"no\": 3,\r\n                \"start_date\": \"07-08-2022\",\r\n                \"end_date\": \"07-08-2024\"\r\n            }\r\n        ]\r\n    }\r\n}"
+				},
+				"url": "http://localhost:5000/add"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roll_no\": 1,\r\n    \"Animal_name\": \"kingkong\",\r\n    \"age\": 15,\r\n    \"gender\": \"Male\"\r\n  }"
+				},
+				"url": "http://127.0.0.1:8000/api/update/1"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/delete animal",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roll_no\": 1,\r\n    \"Animal_name\": \"kingkong\",\r\n    \"age\": 15,\r\n    \"gender\": \"Male\"\r\n  }"
+				},
+				"url": "http://127.0.0.1:8000/api/deleteanimal/11"
+			},
+			"response": []
+		}
+	]
+}
