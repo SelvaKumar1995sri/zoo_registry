@@ -10,25 +10,25 @@
 <hr>
 <h2 align="left">Schema defenition : </h2>
 
-<img src="https://raw.github.com/SelvaKumar1995sri/zoo_registry/blob/main/output/02_schema.png" > 
+<img src="https://github.com/SelvaKumar1995sri/zoo_registry/blob/main/output/02_schema.png" > 
  <hr>
  <h2 align="left">Sample Get api call : </h2>
 
-<img src="https://raw.github.com/SelvaKumar1995sri/zoo_registry/blob/main/output/01_view_all.png" > 
+<img src="https://github.com/SelvaKumar1995sri/zoo_registry/blob/main/output/01_view_all.png" > 
  <hr>
   <h2 align="left">Pytest Report: </h2>
 
-<img src="https://raw.github.com/SelvaKumar1995sri/zoo_registry/blob/main/output/05_pytest.png" > 
+<img src="https://github.com/SelvaKumar1995sri/zoo_registry/blob/main/output/05_pytest.png" > 
  <hr>
   <hr>
   <h2 align="left">Pytest Coverage Report: </h2>
 
-<img src="https://raw.github.com/SelvaKumar1995sri/zoo_registry/blob/main/output/03_coverage.png" > 
+<img src="https://github.com/SelvaKumar1995sri/zoo_registry/blob/main/output/03_coverage.png" > 
  <hr>
   <hr>
   <h2 align="left">Coverage Missed Lines: </h2>
 
-<img src="https://raw.github.com/SelvaKumar1995sri/zoo_registry/blob/main/output/04_cov_missed_line.png" > 
+<img src="https://github.com/SelvaKumar1995sri/zoo_registry/blob/main/output/04_cov_missed_line.png" > 
  <hr>
 
 </div>
