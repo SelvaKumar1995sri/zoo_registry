@@ -3,7 +3,7 @@ from unittest.mock import patch
 from pytest import mark
 import pytest
 import sys
-from src.zoo_app import view_all, view_det
+from src.zoo_app import view_all, view_det, add_det
 
 # @mark.skipif(mongo_engine() == 'mongomock', reason="mongomock does not support that")
 class Test_MongoFunctions():
@@ -32,3 +32,9 @@ class Test_MongoFunctions():
                 resp = view_det(1)
                 assert resp["data"][0]["Animal_name"] == 'Suriya'
 
+    def test_add_det(self):
+            with patch('src.zoo_app.get_collection') as mock_mongo:
+                mock_mongo.return_value = self.mongodb.mycollection
+                d = {"roll_no": 11,"Animal_name": "hipopatamus","age": 6,"gender": "male"}
+                resp = add_det(d)
+                assert resp['status'] == 200

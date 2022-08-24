@@ -49,8 +49,9 @@ def view_det(roll_no):
 @app.post('/api/addanimal/',tags=['Animals'])
 def add_det(animal : Animals):
     try:
-        mycollection.insert_one(animal.dict())
-        return {"data":"Successfully added"}
+        col = get_collection()
+        col.insert_one(animal)
+        return {"status":200 ,"data":"Successfully added"}
     except Exception as e:
         print("error on add data " +str(e))
 
