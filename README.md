@@ -8,11 +8,11 @@
 <img src="https://github.com/SelvaKumar1995sri/zoo_registry/blob/f35e6b54829120b3ef74f6b95852044acadb492d/output/00_swagger_home.png" > 
 
 <hr>
-<h2 align="left">Schema defenition : </h2>
+<h2 align="left">Schema Formate : </h2>
 
 <img src="https://github.com/SelvaKumar1995sri/zoo_registry/blob/main/output/02_schema.png" > 
  <hr>
- <h2 align="left">Sample Get api call : </h2>
+ <h2 align="left">Sample View_all api call : </h2>
 
 <img src="https://github.com/SelvaKumar1995sri/zoo_registry/blob/main/output/01_view_all.png" > 
  <hr>
