@@ -5,7 +5,7 @@ from pytest import mark
 import pytest
 import sys
 
-from src.zoo_app import view_all, view_det, add_det, delete, update
+from src.zoo_app import view_all, view_det, add_det, delete, update, Animals
 
 # @mark.skipif(mongo_engine() == 'mongomock', reason="mongomock does not support that")
 
@@ -38,8 +38,11 @@ class Test_MongoFunctions():
     def test_add_det(self):
         with patch('src.zoo_app.get_collection') as mock_mongo:
             mock_mongo.return_value = self.mongodb.mycollection
-            d = {"roll_no": 11, "Animal_name": "hipopatamus",
-                 "age": 6, "gender": "male"}
+            d = Animals(roll_no = 1,
+            Animal_name = 'horse',
+            age = '3',
+            gender = 'male')
+            
             resp = add_det(d)
             assert resp['status'] == 200
 

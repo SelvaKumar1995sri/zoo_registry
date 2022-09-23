@@ -1,5 +1,6 @@
-fastapi
-pytest
-coverage
-pytest-cov
-pytest-mongodb
+coverage==6.4.2
+fastapi==0.70.1
+pytest==7.1.2
+pytest-cov==3.0.0
+pytest-mongodb==2.2.0
+uvicorn==0.15.0

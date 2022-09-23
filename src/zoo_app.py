@@ -25,7 +25,7 @@ class Animals(BaseModel):
     Animal_name: str
     age: int
     gender: str
-
+    
 
 class AnimalsList(BaseModel):
     data: List[Animals]
@@ -35,7 +35,7 @@ def animal_list_serialiazer(animal_list):
     return [animal.dict() for animal in animal_list]
 
 
-@app.get('/api/', tags=['Animals'])
+@app.get('/api', tags=['Animals'])
 def view_all():
     try:
         col = get_collection()
@@ -61,7 +61,7 @@ def view_det(roll_no):
 def add_det(animal: Animals):
     try:
         col = get_collection()
-        col.insert_one(animal)
+        col.insert_one(animal.dict())
         return {"status": 200, "data": "Successfully added"}
     except Exception as e:
         print("error on add data " + str(e))
@@ -103,4 +103,4 @@ def update(roll_no, student: Animals):
 
 
 if __name__ == '__main__':
-    uvicorn.run("zoo_app:app", reload=True, access_log=False)
+    uvicorn.run("zoo_app:app", reload=True)
